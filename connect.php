@@ -1,7 +1,7 @@
 <?php
 echo '<html>';
 echo '<meta charset="utf-8">';
-echo '<meta http-equiv="refresh" content="30; URL=connect.php">';
+echo '<meta http-equiv="refresh" content="30; URL=connect.php?item=new">';
 echo '<head>';
 echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rancho">';
 echo '<style> body {  text-align: center; font-size=500%;      font-family: "Rancho", serif;       font-size: 26px;  color: white; bgcolor: black;    }    </style>';
@@ -11,7 +11,12 @@ include 'cred.php'; // include the login credentials for the database.
 
 echo '<BODY bgcolor="black">';
 echo '<IMG SRC = "pics/trial-error.gif" width=800px>';
+echo '<DIV id="totalpreis"></DIV>';
 
+?>
+<script type="text/javascript" src="jquery-2.1.3.js"></script>
+
+<?php
 
 // The coordinates can be calculated through php...
 
@@ -28,7 +33,7 @@ echo '<area alt="item6"   coords="300,580,80" href="connect.php?item=item6" shap
 echo '<area alt="item7"   coords="510,580,80" href="connect.php?item=item7" shape="circle"></area>';
 echo '<area alt="item8"   coords="710,580,80" href="connect.php?item=item8" shape="circle"></area>';
 echo '<area alt="item9"   coords="910,580,80" href="connect.php?item=item9" shape="circle"></area>';
-echo '<area alt="updat"  coords="1120,580,80" href="upp.php" shape="circle"></area>';
+echo '<area alt="updat"   coords="1120,580,80" href="connect.php?item=new" shape="circle"></area>';
 // update 
 echo '</map>';
 
@@ -64,27 +69,32 @@ $item = $_GET["item"];
 
 // if statement
 
-// Identify the brand
-$brand = $komponenten[$item];
-$pretty = $prettyprint[$item];
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
-//mysql_set_charset('utf8', $conn); // when using the mysql_-functions
-//mysqli::set_charset('utf8'); // when using mysqli
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-// Increment the counter
-$sql = 'UPDATE `komponent` SET `Verkauf` = `Verkauf` + 1 WHERE `Brand`="' . $brand . '"' ;
+if ($item == "new") { // new customer 
+$totalpreis = 0;
+$sql = 'UPDATE `Preis` SET `Preis` = ' . $totalpreis; 
 $result = $conn->query($sql);
 
-// Set the prettyprint
-$sql = 'UPDATE `komponent` SET `Prettyprint` = "'. $prettyprint[$item] .'" WHERE `Brand`="' . $brand . '"' ;
-//echo $sql;
+echo "<script>
+	$('#totalpreis').html('" . $totalpreis . " kr!');
+	</script>";
+
+} else {
+
+// Identify the brand
+$brand = $komponenten[$item];
+$pretty = $prettyprint[$item];
+
+
+// Increment the counter
+$sql = 'UPDATE `komponent` SET `Verkauf` = `Verkauf` + 1 WHERE `Brand`="' . $brand . '"' ;
 $result = $conn->query($sql);
 
 // Algorithm for the preis-settings
@@ -110,13 +120,23 @@ while($row = $result->fetch_assoc()) {
 	   $origpreis  = $row["Originalpreis"];
 	   $prettyname = $row["Prettyprint"];
     }
-// echo $minipreis . "<BR>";
-// echo $jetztpreis . "<BR>";
-// echo $altpreis . "<BR>";
-// echo $origpreis . "<BR>";
 
 $neuPreis = $jetztpreis*1.03;
-// echo $neuPreis;
+
+$sql = 'SELECT * FROM  `Preis`'; 
+$result = $conn->query($sql);
+// men antar att det alltid är det sista värdet hursomhelst
+while($row = $result->fetch_assoc()) {
+	   $totalpreis = $row["Preis"];
+    }
+
+$totalpreis = $totalpreis + $jetztpreis;
+$sql = 'UPDATE `Preis` SET `Preis` = ' . $totalpreis; 
+$result = $conn->query($sql);
+
+echo "<script>
+	$('#totalpreis').html('" . $totalpreis . " kr!');
+	</script>";
 
 $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' WHERE `Brand`="' . $brand . '"' ;
 $result = $conn->query($sql);
@@ -125,6 +145,8 @@ $sql = 'UPDATE `komponent` SET `Preis` = ' . $neuPreis . ' WHERE `Brand`="' . $b
 $result = $conn->query($sql);
 
 echo "<BR>";
+
+}
 
 // Läser in det som lista om det finns flera poster
 $sql = 'SELECT * FROM  `messages`  WHERE  `id` = "Ticker"';
@@ -135,7 +157,6 @@ while($row = $result->fetch_assoc()) {
  
 echo '<marquee attribute_name="beers" hspace = 10 scrollamount=30 bgcolor=black>' . '<FONT SIZE=+12 text-transform: uppercase; color=yellow face="monospace">' . $dasString . "</FONT>" . '</marquee>';
 echo "<CENTER><IMG SRC = \"pics/bong.png\" width=1224px usemap=\"#beermap\"></CENTER>"; // 1000
-
 
 $conn->close();
 
