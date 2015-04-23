@@ -6,6 +6,15 @@ echo '<meta http-equiv="refresh" content="60">';
 echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">';
 echo '<style>  body {font-family: "Rancho", serif;       font-size: 24px;    color: lightgreen;  text-align: center;}    </style>';
 echo '<script src="chart.js"></script>';
+?>
+<script type="text/javascript" src="jquery-2.1.3.js"></script>
+<script type="text/javascript" src="marquee.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('marquee').marquee();
+    });
+</script>
+<?php
 echo '</HEAD>';
 echo '<BODY bgcolor="black">';
 
@@ -92,7 +101,7 @@ if ($result->num_rows > 0) {
 
 // Output the pics 
 echo '<center> <IMG SRC = "pics/trial-error.gif" width=800px></center>';
-echo '<marquee attribute_name="beers" hspace = 10 scrollamount=30 bgcolor=black>' . '<FONT SIZE=+12 text-transform: uppercase; color=yellow face="monospace">' . $dasString . "</FONT>" . '</marquee>';
+echo '<marquee attribute_name="beers" hspace = 10 scrollamount=4 bgcolor=black>' . '<FONT SIZE=+12 text-transform: uppercase; color=yellow face="monospace">' . $dasString . "</FONT>" . '</marquee>';
 echo '<center> <IMG SRC = "pics/ping.png" width=1000px></center>';
 
 // --------------------------
