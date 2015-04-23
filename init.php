@@ -12,6 +12,7 @@ include 'cred.php'; // include the login credentials for the database.
 // Create the databases
 $conn = mysqli_connect($servername, $username, $password);
 $sql = "CREATE DATABASE " . $dbname;
+
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -23,7 +24,6 @@ if (mysqli_query($conn, $sql)) {
 }
 
 mysqli_close($conn);
-
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -41,7 +41,6 @@ Preis float,
 Brand text,
 ID  int(11)
 )";
-
 
 // sql to create table
 if ($conn->query($sql) === TRUE) {
@@ -77,6 +76,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 
+// Messages in general
 $sql = "CREATE TABLE messages (
 Message text,
 id text)";
@@ -87,7 +87,18 @@ if ($conn->query($sql) === TRUE) {
     echo "Error creating table: " . $conn->error;
 }
 
+// Messages in general
+$sql = "CREATE TABLE Preis (
+Preis float)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Table Preis created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
 $conn->close();
+
 
 //
 $mode = $_GET["mode"];
@@ -108,6 +119,9 @@ $sql = 'TRUNCATE TABLE  `messages`';
 $result = $conn->query($sql);
 
 $sql = 'TRUNCATE TABLE  `geschichte`';
+$result = $conn->query($sql);
+
+$sql = 'TRUNCATE TABLE  `Preis`';
 $result = $conn->query($sql);
 
 // MANUAL entry for time being --------------------------------------------------------------------------------------------------
@@ -146,6 +160,9 @@ $sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verka
 $result = $conn->query($sql);
 
 $sql = 'INSERT INTO `dasBar`.`messages` (`id`, `Message` ) VALUES ("Ticker", "Soon to be Preises")';
+$result = $conn->query($sql);
+
+$sql = 'INSERT INTO `dasBar`.`Preis` (`Preis` ) VALUES ("0")';
 $result = $conn->query($sql);
 
 
