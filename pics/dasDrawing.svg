@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1052.3622"
+   height="744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="drawing.svg">
+  <defs
+     id="defs4">
+    <filter
+       inkscape:collect="always"
+       id="filter3917"
+       x="-0.020791568"
+       width="1.0415831"
+       y="-0.13406381"
+       height="1.2681276">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="8.452337"
+         id="feGaussianBlur3919" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3845">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-2">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-1" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-5">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-6" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-7">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-11" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-53">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-7" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-8">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-0" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-82">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-72" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-25">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-5" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-0">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-8" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-4">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-2" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-53-0">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-7-8" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3845-4-53-0-7">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="3.2194815"
+         id="feGaussianBlur3847-1-7-8-9" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       inkscape:collect="always"
+       id="filter3917-7"
+       x="-0.020791568"
+       width="1.0415831"
+       y="-0.13406381"
+       height="1.2681276">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="8.452337"
+         id="feGaussianBlur3919-6" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.41622775"
+     inkscape:cx="1709.1546"
+     inkscape:cy="650.21467"
+     inkscape:document-units="px"
+     inkscape:current-layer="g3969-5"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="1023"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.2677)">
+    <g
+       id="g3235"
+       transform="translate(110.54038,0)"
+       inkscape:export-filename="/var/www/html/bong.png"
+       inkscape:export-xdpi="199.93629"
+       inkscape:export-ydpi="199.93629">
+      <g
+         inkscape:export-ydpi="199.93629"
+         inkscape:export-xdpi="199.93629"
+         inkscape:export-filename="/var/www/html/bong.png"
+         transform="translate(-22.347658,-16.252842)"
+         id="g3969">
+        <text
+           xml:space="preserve"
+           style="font-size:212.51837158px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffff00;fill-opacity:1;stroke:none;filter:url(#filter3917);font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           x="54.035122"
+           y="511.98279"
+           id="text3753-0"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3755-4"
+             x="54.035122"
+             y="511.98279"
+             style="font-weight:bold;fill:#ffff00">DAS BAR</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:212.51837158px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#008000;fill-opacity:1;stroke:#00ff00;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           x="54.035122"
+           y="511.98279"
+           id="text3753"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3755"
+             x="54.035122"
+             y="511.98279"
+             style="font-weight:bold;fill:#008000;stroke:#00ff00">DAS BAR</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3135"
+       transform="translate(-8.5638931,-17.26198)"
+       inkscape:export-filename="/var/www/html/bong.png"
+       inkscape:export-xdpi="199.93629"
+       inkscape:export-ydpi="199.93629">
+      <g
+         id="g3185">
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(900.11736,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-3"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-8)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(900.11736,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-2"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-53)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(693.56129,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-14"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-7)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(693.56135,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-13"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-82)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(487.00527,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-6"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-25)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(487.00528,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-7"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-5)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(280.44927,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-1"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-2)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(280.44926,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-140"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-0)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(73.893222,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-8"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-4)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(73.893218,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(73.893218,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757"
+           style="fill:#005500;fill-opacity:1;fill-rule:nonzero;stroke:#112b00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(280.44927,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-8"
+           style="fill:#005500;fill-opacity:1;fill-rule:nonzero;stroke:#112b00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(487.00528,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-3"
+           style="fill:#aade87;fill-opacity:1;fill-rule:nonzero;stroke:#112b00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(693.56129,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-8-3"
+           style="fill:#005500;fill-opacity:1;fill-rule:nonzero;stroke:#112b00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(900.11736,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-8-3-4"
+           style="fill:#ffe680;fill-opacity:1;fill-rule:nonzero;stroke:#d4aa00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(73.893222,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-80"
+           style="fill:#ffaaaa;fill-opacity:1;fill-rule:nonzero;stroke:#ff5555;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(280.44926,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-8-2"
+           style="fill:#005500;fill-opacity:1;fill-rule:nonzero;stroke:#112b00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(487.00527,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-3-1"
+           style="fill:#aaffee;fill-opacity:1;fill-rule:nonzero;stroke:#37c8ab;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(693.56135,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-8-3-8"
+           style="fill:#005500;fill-opacity:1;fill-rule:nonzero;stroke:#112b00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(900.11736,658.364)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-8-3-4-0"
+           style="fill:#005500;fill-opacity:1;fill-rule:nonzero;stroke:#112b00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <text
+           inkscape:export-filename="/var/www/html/bong.png"
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           sodipodi:linespacing="125%"
+           id="text3983"
+           y="688.1355"
+           x="62.882549"
+           style="font-size:84.87439727999999661px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d4ff2a;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold"
+             y="688.1355"
+             x="62.882549"
+             id="tspan3985"
+             sodipodi:role="line">TT</tspan></text>
+        <text
+           inkscape:export-filename="/var/www/html/bong.png"
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           sodipodi:linespacing="125%"
+           id="text3983-9"
+           y="681.55444"
+           x="247.27609"
+           style="font-size:65.46126556000000107px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d4ff2a;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold"
+             y="681.55444"
+             x="247.27609"
+             id="tspan3985-6"
+             sodipodi:role="line">Staro</tspan></text>
+        <text
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           sodipodi:linespacing="125%"
+           id="text3983-9-8"
+           y="681.09619"
+           x="473.45975"
+           style="font-size:65.46126556000000107px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#338000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold;fill:#338000"
+             y="681.09619"
+             x="473.45975"
+             id="tspan3985-6-0"
+             sodipodi:role="line">Lätt</tspan></text>
+        <text
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           sodipodi:linespacing="125%"
+           id="text3983-9-8-5"
+           y="682.37268"
+           x="675.33478"
+           style="font-size:65.46126556000000107px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d4ff2a;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold"
+             y="682.37268"
+             x="675.33478"
+             id="tspan3985-6-0-2"
+             sodipodi:role="line">Carl</tspan></text>
+        <text
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           sodipodi:linespacing="125%"
+           id="text3983-9-8-5-3"
+           y="677.21075"
+           x="860.79327"
+           style="font-size:50.77581023999999843px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#800000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold;fill:#800000"
+             y="677.21075"
+             x="860.79327"
+             id="tspan3985-6-0-2-7"
+             sodipodi:role="line">Punsch</tspan></text>
+        <text
+           inkscape:export-filename="/var/www/html/bong.png"
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           sodipodi:linespacing="125%"
+           id="text3983-9-5"
+           y="936.32379"
+           x="253.4724"
+           style="font-size:65.46126556000000107px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d4ff2a;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold"
+             y="936.32379"
+             x="253.4724"
+             id="tspan3985-6-4"
+             sodipodi:role="line">Mari</tspan></text>
+        <text
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           sodipodi:linespacing="125%"
+           id="text3983-9-8-9"
+           y="932.43573"
+           x="456.50525"
+           style="font-size:65.46126556000000107px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000080;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold;fill:#000080"
+             y="932.43573"
+             x="456.50525"
+             id="tspan3985-6-0-0"
+             sodipodi:role="line">Sprit</tspan></text>
+        <text
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           sodipodi:linespacing="125%"
+           id="text3983-9-8-5-4"
+           y="931.3009"
+           x="657.98651"
+           style="font-size:49.86764907999999963px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d4ff2a;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold"
+             y="931.3009"
+             x="657.98651"
+             id="tspan3985-6-0-2-4"
+             sodipodi:role="line">Stellan</tspan></text>
+        <text
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           sodipodi:linespacing="125%"
+           id="text3983-9-8-5-3-4"
+           y="932.77869"
+           x="869.09113"
+           style="font-size:55.17070770000000124px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#d4ff2a;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold"
+             y="932.77869"
+             x="869.09113"
+             id="tspan3985-6-0-2-7-0"
+             sodipodi:role="line">Heinz</tspan></text>
+        <text
+           inkscape:export-filename="/var/www/html/bong.png"
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           sodipodi:linespacing="125%"
+           id="text3983-9-5-7"
+           y="936.78204"
+           x="47.832298"
+           style="font-size:65.46126556000000107px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#1f241c;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold;fill:#1f241c"
+             y="936.78204"
+             x="47.832298"
+             id="tspan3985-6-4-2"
+             sodipodi:role="line">Läsk</tspan></text>
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(1109.8206,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-9-5-2-3"
+           style="opacity:0.78884463000000005;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-53-0)"
+           sodipodi:type="arc" />
+        <path
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           transform="translate(1109.8206,403.95466)"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           sodipodi:ry="80.487038"
+           sodipodi:rx="80.487038"
+           sodipodi:cy="272.67038"
+           sodipodi:cx="54.205559"
+           id="path3757-8-3-4-6"
+           style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#00ffff;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           sodipodi:type="arc" />
+        <text
+           inkscape:export-ydpi="199.93629"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-filename="/var/www/html/bong.png"
+           sodipodi:linespacing="125%"
+           id="text3983-9-8-5-3-0"
+           y="676.22064"
+           x="1089.8179"
+           style="font-size:50.77581023999999843px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           xml:space="preserve"
+           transform="translate(8.5638931,17.26198)"><tspan
+             style="font-weight:bold;fill:#ffffff"
+             y="676.22064"
+             x="1089.8179"
+             id="tspan3985-6-0-2-7-8"
+             sodipodi:role="line">Rezet</tspan></text>
+        <path
+           sodipodi:type="arc"
+           style="opacity:0.78884463;fill:#ffff00;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;filter:url(#filter3845-4-53-0-7)"
+           id="path3757-9-5-2-3-4"
+           sodipodi:cx="54.205559"
+           sodipodi:cy="272.67038"
+           sodipodi:rx="80.487038"
+           sodipodi:ry="80.487038"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           transform="translate(1109.8206,658.364)"
+           inkscape:export-filename="/var/www/html/bong.png"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-ydpi="199.93629" />
+        <path
+           sodipodi:type="arc"
+           style="fill:#0000ff;fill-opacity:1;fill-rule:nonzero;stroke:#008080;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+           id="path3757-8-3-4-6-4"
+           sodipodi:cx="54.205559"
+           sodipodi:cy="272.67038"
+           sodipodi:rx="80.487038"
+           sodipodi:ry="80.487038"
+           d="m 134.6926,272.67038 c 0,44.45176 -36.035278,80.48704 -80.487041,80.48704 -44.4517637,0 -80.487038,-36.03528 -80.487038,-80.48704 0,-44.45176 36.0352743,-80.48704 80.487038,-80.48704 44.451763,0 80.487041,36.03528 80.487041,80.48704 z"
+           transform="translate(1109.8206,658.364)"
+           inkscape:export-filename="/var/www/html/bong.png"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-ydpi="199.93629" />
+        <text
+           xml:space="preserve"
+           style="font-size:50.77581024px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           x="1107.0303"
+           y="949.95117"
+           id="text3983-9-8-5-3-0-5"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="/var/www/html/bong.png"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-ydpi="199.93629"><tspan
+             sodipodi:role="line"
+             id="tspan3985-6-0-2-7-8-3"
+             x="1107.0303"
+             y="949.95117"
+             style="font-weight:bold;fill:#ffffff">Upp!</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3235-7"
+       transform="translate(109.71248,-251.85159)"
+       inkscape:export-filename="/var/www/html/bong.png"
+       inkscape:export-xdpi="199.93629"
+       inkscape:export-ydpi="199.93629">
+      <g
+         inkscape:export-ydpi="199.93629"
+         inkscape:export-xdpi="199.93629"
+         inkscape:export-filename="/var/www/html/bong.png"
+         transform="translate(-22.347658,-16.252842)"
+         id="g3969-5">
+        <text
+           xml:space="preserve"
+           style="font-size:212.51837158px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffff00;fill-opacity:1;stroke:none;filter:url(#filter3917-7);font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           x="54.035122"
+           y="511.98279"
+           id="text3753-0-4"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="/var/www/html/ping.png"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-ydpi="199.93629"><tspan
+             sodipodi:role="line"
+             id="tspan3755-4-6"
+             x="54.035122"
+             y="511.98279"
+             style="font-weight:bold;fill:#ffff00">DAS ÖLPREIS</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:212.51837158px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#008000;fill-opacity:1;stroke:#00ff00;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+           x="54.035122"
+           y="511.98279"
+           id="text3753-1"
+           sodipodi:linespacing="125%"
+           inkscape:export-filename="/var/www/html/ping.png"
+           inkscape:export-xdpi="199.93629"
+           inkscape:export-ydpi="199.93629"><tspan
+             sodipodi:role="line"
+             id="tspan3755-0"
+             x="54.035122"
+             y="511.98279"
+             style="font-weight:bold;fill:#008000;stroke:#00ff00">DAS ÖLPREIS</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
