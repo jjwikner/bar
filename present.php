@@ -108,12 +108,21 @@ echo '<center> <IMG SRC = "pics/ping.png" width=1000px></center>';
 
 // foreach over all brands to skapa alle grafen.
  
+echo '<CENTER><TABLE><TR>';
+$colcounter=1;
+
 foreach ($brands as $brand) {
 
 	// Setup a new graph for the bier in question
-	// echo '<H1>' . $pretty[$brand] . '</H1>';
-	echo '<canvas id="biers_' . $brand . '" width="300" height="300"></canvas>';
-
+	echo '<TD><H3>' . $pretty[$brand] . '</H3>';
+	echo '<canvas id="biers_' . $brand . '" width="300" height="300"></canvas></TD>';
+	if ($colcounter == 5) {
+	    $colcounter = 1; 
+	    echo '</TR><TR>';
+	    }
+	    else	{
+	    $colcounter = $colcounter +1; 
+	    }
 	$sql = 'SELECT * FROM `geschichte` WHERE `Brand`= "' . $brand . '"';
 	$result = $conn->query($sql);
 
@@ -159,6 +168,7 @@ echo "<script>
     new Chart(biers).Line(bierData); </script>";
 
 }
+echo '</TR></TABLE></CENTER>';
 
 echo "</BODY>";
 echo "</HTML>";
