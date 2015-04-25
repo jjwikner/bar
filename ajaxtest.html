@@ -6,7 +6,7 @@
 <script type="text/javascript">
 $(function() {
   setTimeout(function() {
-    var data = {"cmd": "ping"};
+    var data = {"cmd": "marquee"};
     data = $(this).serialize() + "&" + $.param(data);
     $.ajax({
      type: "POST",
@@ -19,7 +19,7 @@ $(function() {
       );
      }
     });
-   }, 5000);
+   }, 3000);
 
 });
 </script>
