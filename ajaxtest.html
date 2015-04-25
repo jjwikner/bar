@@ -4,8 +4,12 @@
 <meta charset="utf-8" />
 <script type="text/javascript" src="jquery-2.1.3.js"></script>
 <script type="text/javascript">
-$(function() {
-  setTimeout(function() {
+function ajaxDone(data) {
+    $(".scroll").html(data["data"]);
+    setTimeout(sendCmd, 3000);
+}
+
+function sendCmd() {
     var data = {"cmd": "marquee"};
     data = $(this).serialize() + "&" + $.param(data);
     $.ajax({
@@ -13,14 +17,11 @@ $(function() {
      dataType: "json",
      url: "ajax.php",
      data: data,
-     success: function(data) {
-      $(".scroll").html(
-       data["data"]
-      );
-     }
-    });
-   }, 3000);
+     success: ajaxDone});
+}
 
+$(function() {
+  setTimeout(sendCmd, 3000);
 });
 </script>
 </head>
