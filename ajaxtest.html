@@ -13,6 +13,9 @@
     });
 </script>
 <script type="text/javascript">
+
+var bierchart;
+
 function ajaxDone(data) {
     switch(data["cmd"]) {
       case "marquee":
@@ -23,7 +26,10 @@ function ajaxDone(data) {
          $('#chart-title').html(data["brand"]);
          $('#chart-preis').html(data["preis"]);
          var chartCanvas = $('#bier-chart').get(0).getContext("2d");           
-         var newchart = new Chart(chartCanvas).Line({labels: data["labels"],
+         if (bierchart) {
+            bierchart.destroy();
+         }
+         bierchart = new Chart(chartCanvas).Line({labels: data["labels"],
                       datasets: [{
                         fillColor : 'rgba(255,255,255,0)',
 			strokeColor : '#00FF00',
@@ -62,7 +68,7 @@ function requestChart() {
 
 $(function() {
   brandNumber = 0;
-  setInterval(updatePreis, 61000);
+  setInterval(updatePreis, 60000);
   setTimeout(requestMarquee, 6000);
   setTimeout(requestChart, 3000);
 });
@@ -86,11 +92,11 @@ $(function() {
   <center>
     <br/>
     <font size=+12 color=yellow face="monospace">
-      <div id="chart-title">Das Bier</div>
+      <div id="chart-title">Ein Bier</div>
     </font>
-    <canvas id="bier-chart" width=800 height=500></canvas>
+    <canvas id="bier-chart" width=700 height=400></canvas>
     <font size=+12 color=yellow face="monospace">
-      <div id="chart-preis">Das Preis</div>
+      <div id="chart-preis">Ein Preis</div>
     </font>
   </center>
 </body>
