@@ -16,12 +16,56 @@ if (is_ajax()) {
         case "preis":
             update_preis($return);
             break;
+        case "chart":
+            construct_chart($_POST["brandNumber"], $return);
+            break;
         }
     } else {
         echo "Ojoj!";
     }
 }
 exit(0);
+
+function construct_chart($brandNumber, $return) {
+   global $servername, $username, $password, $dbname;
+   $conn = new mysqli($servername, $username, $password, $dbname);
+   if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+   }     
+
+   $sql = "SELECT * FROM `komponent`";
+   $result = $conn->query($sql);
+   if ($result->num_rows > 0) {
+       $num = $brandNumber % $result->num_rows;
+
+       $row = $result->fetch_assoc();
+       for ($i=0; $i < $num; $i++) {
+           $row = $result->fetch_assoc();
+       }
+       $brand = $row["Brand"];
+       $return["brand"] = $row["Prettyprint"];
+       $return["preis"] = $row["Preis"] . " kr";
+
+       $sql = 'SELECT * FROM `geschichte` WHERE `Brand`= "' . $brand . '" AND `Zeit` >= DATE_SUB(NOW(), INTERVAL 30 MINUTE) ORDER BY `Zeit` ASC';
+       $result = $conn->query($sql);
+       $labels = array();
+       $data = array();
+       if ($result->num_rows > 0) {
+           $index = $result->num_rows;
+           while ($row = $result->fetch_assoc()) {
+               $data[] = $row["Preis"];
+               $labels[] = $index;
+               $index--;
+           }
+       }
+       $return["labels"] = $labels;
+       $return["data"] = $data;       
+   }
+   
+   echo json_encode($return);
+   
+   $conn->close();
+}
 
 function update_preis($return) {
 // To increment the Preis on all bier sorts.
@@ -86,18 +130,12 @@ function construct_marquee($return) {
     $dasString = "";
     $updString = ""; // needed since html-tags were not allowed without escaping in the mysql server.
     
-// For Prettyprinting
-    $brands = [];
-    $pretty = [];
-    
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             // find the price and difference from original price ("for the day")
             $preis = $row["Preis"];
             $orig  = $row["Originalpreis"];
             $delta = $preis - $orig; 
-            $brands[] = $row["Brand"];
-            $pretty[$row["Brand"]] = $row["Prettyprint"];
             
             if ($delta > 0) {
                 $sign = '<FONT color="blue"> +';

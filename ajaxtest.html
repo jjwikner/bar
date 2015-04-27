@@ -19,14 +19,25 @@ function ajaxDone(data) {
         $(".scroll").html(data["data"]);
         setTimeout(requestMarquee, 6000);
         break;
-      
+      case "chart":
+         $('#chart-title').html(data["brand"]);
+         $('#chart-preis').html(data["preis"]);
+         var chartCanvas = $('#bier-chart').get(0).getContext("2d");           
+         var newchart = new Chart(chartCanvas).Line({labels: data["labels"],
+                      datasets: [{
+                        fillColor : 'rgba(255,255,255,0)',
+			strokeColor : '#00FF00',
+			pointColor : '#00ff00',
+			pointStrokeColor : '#00ff00',
+			data : data["data"]}]});
+          setTimeout(requestChart, 10000);
+        break;
       default:
         break;
     }
 }
 
-function sendCmd(command) {
-    var data = {"cmd": command};
+function sendCmd(data) {
     data = $(this).serialize() + "&" + $.param(data);
     $.ajax({
      type: "POST",
@@ -37,30 +48,50 @@ function sendCmd(command) {
 }
 
 function requestMarquee() {
-  sendCmd("marquee");
+  sendCmd({"cmd": "marquee"});
 }
 
 function updatePreis() {
-  sendCmd("preis");
+  sendCmd({"cmd": "preis"});
+}
+
+function requestChart() {
+  sendCmd({"cmd": "chart", "brandNumber": brandNumber});
+  brandNumber = brandNumber + 1;
 }
 
 $(function() {
+  brandNumber = 0;
   setInterval(updatePreis, 61000);
   setTimeout(requestMarquee, 6000);
+  setTimeout(requestChart, 3000);
 });
 
 
 </script>
 </head>
 <body bgcolor="black">
-<center><IMG SRC = "pics/trial-error.gif" width=800px></center>
-
-<marquee attribute_name="beers" hspace=10 scrollamount=4 bgcolor="black">
-<font size=+12 text-transform: uppercase; color=yellow face="monospace">
-<div class="scroll">
-Willkommen ins Rallykneipe!
-</div>
-</font>
-</marquee>
+  <center><IMG SRC = "pics/trial-error.gif" width=800px></center>
+  
+  <marquee attribute_name="beers" hspace=10 scrollamount=4 bgcolor="black">
+    <font size=+12 text-transform: uppercase; color=yellow face="monospace">
+      <div class="scroll">
+	Willkommen ins Rallykneipe!
+      </div>
+    </font>
+  </marquee>
+  
+  <center> <IMG SRC = "pics/ping.png" width=1000px></center>
+  
+  <center>
+    <br/>
+    <font size=+12 color=yellow face="monospace">
+      <div id="chart-title">Das Bier</div>
+    </font>
+    <canvas id="bier-chart" width=800 height=500></canvas>
+    <font size=+12 color=yellow face="monospace">
+      <div id="chart-preis">Das Preis</div>
+    </font>
+  </center>
 </body>
 </html>
