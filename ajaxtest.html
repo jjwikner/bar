@@ -2,8 +2,7 @@
 <head>
 <title>Ajaxtest!</title>
 <meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
-<style>  body {font-family: "Rancho", serif; font-size: 24px; color: lightgreen;  text-align: center;}</style>
+<link rel="stylesheet" href="bar.css">
 <script type="text/javascript" src="jquery-2.1.3.js"></script>
 <script type="text/javascript" src="chart.js"></script>
 <script type="text/javascript" src="marquee.js"></script>
@@ -29,6 +28,12 @@ function ajaxDone(data) {
          if (bierchart) {
             bierchart.destroy();
          }
+
+        $('#preisliste').hide();
+        $('#chart-title').show();
+        $('#chart-preis').show();
+        $('#bier-chart').show();
+   
          bierchart = new Chart(chartCanvas).Line({labels: data["labels"],
                       datasets: [{
                         fillColor : 'rgba(255,255,255,0)',
@@ -36,7 +41,15 @@ function ajaxDone(data) {
 			pointColor : '#00ff00',
 			pointStrokeColor : '#00ff00',
 			data : data["data"]}]});
-          setTimeout(requestChart, 10000);
+          setTimeout(requestPreisliste, 10000);
+        break;
+      case "preisliste":
+        $('#chart-title').hide();
+        $('#chart-preis').hide();
+        $('#bier-chart').hide();
+        $('#preisliste').html(data["preisliste"]);
+        $('#preisliste').show();
+        setTimeout(requestChart, 10000);
         break;
       default:
         break;
@@ -66,6 +79,10 @@ function requestChart() {
   brandNumber = brandNumber + 1;
 }
 
+function requestPreisliste() {
+  sendCmd({"cmd": "preisliste"});
+}
+
 $(function() {
   brandNumber = 0;
   setInterval(updatePreis, 60000);
@@ -80,24 +97,19 @@ $(function() {
   <center><IMG SRC = "pics/trial-error.gif" width=800px></center>
   
   <marquee attribute_name="beers" hspace=10 scrollamount=4 bgcolor="black">
-    <font size=+12 text-transform: uppercase; color=yellow face="monospace">
-      <div class="scroll">
-	Willkommen ins Rallykneipe!
-      </div>
-    </font>
+    <div class="scroll">
+      Willkommen ins Rallykneipe!
+    </div>
   </marquee>
   
   <center> <IMG SRC = "pics/ping.png" width=1000px></center>
   
   <center>
     <br/>
-    <font size=+12 color=yellow face="monospace">
       <div id="chart-title">Ein Bier</div>
-    </font>
+      <div id="preisliste"></div>
     <canvas id="bier-chart" width=700 height=400></canvas>
-    <font size=+12 color=yellow face="monospace">
       <div id="chart-preis">Ein Preis</div>
-    </font>
   </center>
 </body>
 </html>

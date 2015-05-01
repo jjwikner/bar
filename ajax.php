@@ -19,12 +19,52 @@ if (is_ajax()) {
         case "chart":
             construct_chart($_POST["brandNumber"], $return);
             break;
+        case "preisliste":
+            construct_pricelist($return);
+            break;
         }
     } else {
         echo "Ojoj!";
     }
 }
 exit(0);
+
+function construct_pricelist($return) {
+   global $servername, $username, $password, $dbname;
+   $conn = new mysqli($servername, $username, $password, $dbname);
+   if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+   }     
+
+   $sql = "SELECT * FROM `komponent`";
+   $result = $conn->query($sql);
+
+   $table = "<table>";
+   
+   $count = 0;
+   
+   while($row = $result->fetch_assoc()) {
+       $even = ($count % 2) == 0;
+       if ($even) {
+           $table = $table . "<tr>";
+           $padding = "";
+       } else {
+           $padding = " style='padding:0 0px 0 70px;'";
+       }
+       $table = $table . "<td" . $padding . ">" . $row["Prettyprint"] . "</td>";
+       $table = $table . "<td>" . (string)round($row["Preis"]) . "kr</td>";
+       if (!$even) {
+           $table = $table . "</tr>";
+       }
+       $count++;
+   }
+
+   $table = $table . "</table>";
+   $return["preisliste"] = $table;
+
+   echo json_encode($return);   
+   $conn->close();
+}
 
 function construct_chart($brandNumber, $return) {
    global $servername, $username, $password, $dbname;
