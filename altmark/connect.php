@@ -101,15 +101,6 @@ $result = $conn->query($sql);
 // Troligen something with the minimipreis.
 
 // Läser in det som lista om det finns flera poster
-$sql = 'SELECT `Minimipreis` FROM  `komponent`  WHERE  `Brand` = "' . $brand . '"';
-$result = $conn->query($sql);
-// men antar att det alltid är det sista värdet hursomhelst
-while($row = $result->fetch_assoc()) {
-	   $minipreis = $row["Minimipreis"];
-    }
-// echo $minipreis;
-
-// Läser in det som lista om det finns flera poster
 $sql = 'SELECT * FROM  `komponent`  WHERE  `Brand` = "' . $brand . '"';
 $result = $conn->query($sql);
 // men antar att det alltid är det sista värdet hursomhelst
@@ -138,11 +129,11 @@ echo "<script>
 	$('#totalpreis').html('" . $totalpreis . " kr!');
 	</script>";
 
-$sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' WHERE `Brand`="' . $brand . '"' ;
+$sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' , `Preis` = ' . $neuPreis . ' WHERE `Brand`="' . $brand . '"' ;
 $result = $conn->query($sql);
 
-$sql = 'UPDATE `komponent` SET `Preis` = ' . $neuPreis . ' WHERE `Brand`="' . $brand . '"' ;
-$result = $conn->query($sql);
+//$sql = 'UPDATE `komponent` SET `Preis` = ' . $neuPreis . ' WHERE `Brand`="' . $brand . '"' ;
+//$result = $conn->query($sql);
 
 echo "<BR>";
 

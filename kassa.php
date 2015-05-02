@@ -88,7 +88,6 @@ while ($row = $result->fetch_assoc()) {
         echo"</tr><tr>";
     }
     echo "<td align=\"center\" height=150><button id=\"button-". $count ."\" style=\"width:200px\" onClick=\"verkauf('" . $row["Brand"] . "')\">#</button></td>\n";
-#    echo "<td align=\"center\" height=150><button id=\"button-". $count ."\" style=\"width:200px\" onClick=\"verkauf('" . $row["Brand"] . "')\">" . $row["Brand"] . "<br/>" . round($row["Preis"]) . "</button></td>\n";
     $count++;
 }
 echo "</tr></table>\n";

@@ -137,17 +137,17 @@ foreach ($brands as $brand) {
 	 	   $dataVector = $dataVector . $preis . ','; 
        		   $counter = $counter + 1;
 		   }
-} else {
-    echo "0 results";
-}
+    } else {
+        echo "0 results";
+    }
 
-$counterLabels = $counterLabels . $counter . ']'; // Ugly but simple
-$dataVector = $dataVector . $preis . ']'; // Ugly but simple
-
-$labels = $counterLabels;
-$data   = $dataVector;
-
-$struct =  'var bierData = {
+    $counterLabels = $counterLabels . $counter . ']'; // Ugly but simple
+    $dataVector = $dataVector . $preis . ']'; // Ugly but simple
+    
+    $labels = $counterLabels;
+    $data   = $dataVector;
+    
+    $struct =  'var bierData = {
 	labels : ' . $labels . ', 
 	title : { text : "Das Bier" }, 
 	datasets : [
@@ -158,15 +158,15 @@ $struct =  'var bierData = {
 			pointStrokeColor : "#00ff00",
 			data : ' . $data . '	}
 			] };';
-
-echo '<script>';
-echo $struct;
-echo '</script>';
-
-echo "<script>
+    
+    echo '<script>';
+    echo $struct;
+    echo '</script>';
+    
+    echo "<script>
     var biers = document.getElementById('biers_" . $brand . "').getContext('2d');
     new Chart(biers).Line(bierData); </script>";
-
+    
 }
 echo '</TR></TABLE></CENTER>';
 
