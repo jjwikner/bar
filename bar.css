@@ -4,3 +4,10 @@ body, td {
     text-transform: uppercase;
     color: yellow;
 }
+
+button {
+    font-family: "Courier";
+    font-size: 30;
+    text-transform: uppercase;
+    color: black;
+}

@@ -22,12 +22,65 @@ if (is_ajax()) {
         case "preisliste":
             construct_pricelist($return);
             break;
+        case "kassapreis":
+            kassapreis($return);
+            break;
+        case "verkauf":
+            verkauf($_POST["brand"], $return);
+            break;
         }
     } else {
         echo "Ojoj!";
     }
 }
 exit(0);
+
+function verkauf($brand, $return) {
+   global $servername, $username, $password, $dbname;
+   $conn = new mysqli($servername, $username, $password, $dbname);
+   if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+   }     
+
+   $sql = 'SELECT * FROM  `komponent`  WHERE  `Brand` = "' . $brand . '"';
+   $result = $conn->query($sql);
+   $row = $result->fetch_assoc();
+
+   $jetztpreis = $row["Preis"];
+   $neuPreis = $row["Preis"] * 1.03;
+
+   $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' , `Preis` = ' . $neuPreis . ' WHERE `Brand`="' . $brand . '"' ;
+   $result = $conn->query($sql);
+
+   echo json_encode($return);   
+   $conn->close();
+}
+
+function kassapreis($return) {
+   global $servername, $username, $password, $dbname;
+   $conn = new mysqli($servername, $username, $password, $dbname);
+   if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+   }     
+
+   $sql = "SELECT * FROM `komponent` ORDER BY `Brand` ASC";
+   $result = $conn->query($sql);
+   
+   $preise = array();
+   $brands = array();
+
+   while($row = $result->fetch_assoc()) {
+       $brands[] = $row["Brand"];
+       $preise[] = $row["Preis"];
+   }
+
+   $return["brands"] = $brands;
+   $return["preise"] = $preise;
+
+   echo json_encode($return);   
+   $conn->close();
+}
+
 
 function construct_pricelist($return) {
    global $servername, $username, $password, $dbname;
@@ -36,7 +89,7 @@ function construct_pricelist($return) {
        die("Connection failed: " . $conn->connect_error);
    }     
 
-   $sql = "SELECT * FROM `komponent`";
+   $sql = "SELECT * FROM `komponent` ORDER BY `Brand` ASC";
    $result = $conn->query($sql);
 
    $table = "<table>";
