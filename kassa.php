@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Ajaxtest!</title>
+<title>Das Kassagerät!</title>
 <meta charset="utf-8" />
      <link rel="stylesheet" href="bar.css">
      <script type="text/javascript" src="jquery-2.1.3.js"></script>
@@ -9,6 +9,7 @@
      $(function() {
          $('marquee').marquee();
          requestPreis();
+         setInterval(requestPreis, 8000);
      });
 
 function ajaxDone(data) {
