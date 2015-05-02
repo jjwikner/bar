@@ -45,11 +45,16 @@ function verkauf($brand, $return) {
    $sql = 'SELECT * FROM  `komponent`  WHERE  `Brand` = "' . $brand . '"';
    $result = $conn->query($sql);
    $row = $result->fetch_assoc();
+   $id = $row["ID"];
 
    $jetztpreis = $row["Preis"];
    $neuPreis = $row["Preis"] * 1.03;
 
    $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' , `Preis` = ' . $neuPreis . ' WHERE `Brand`="' . $brand . '"' ;
+   $result = $conn->query($sql);
+
+   // Store the  change in the log database
+   $sql = 'INSERT INTO `dasBar`.`geschichte` (`Zeit`, `Preis`, `Brand`, `ID`) VALUES ( NOW(), "' . $neuPreis . '", "' . $brand . '" , "' . $id . '" );';
    $result = $conn->query($sql);
 
    echo json_encode($return);   
@@ -63,7 +68,7 @@ function kassapreis($return) {
        die("Connection failed: " . $conn->connect_error);
    }     
 
-   $sql = "SELECT * FROM `komponent` ORDER BY `Brand` ASC";
+   $sql = "SELECT * FROM `komponent` ORDER BY `Prettyprint` ASC";
    $result = $conn->query($sql);
    
    $preise = array();
@@ -89,7 +94,7 @@ function construct_pricelist($return) {
        die("Connection failed: " . $conn->connect_error);
    }     
 
-   $sql = "SELECT * FROM `komponent` ORDER BY `Brand` ASC";
+   $sql = "SELECT * FROM `komponent` ORDER BY `Prettyprint` ASC";
    $result = $conn->query($sql);
 
    $table = "<table>";
@@ -126,7 +131,7 @@ function construct_chart($brandNumber, $return) {
        die("Connection failed: " . $conn->connect_error);
    }     
 
-   $sql = "SELECT * FROM `komponent`";
+   $sql = "SELECT * FROM `komponent` ORDER BY `Prettyprint` ASC";
    $result = $conn->query($sql);
    if ($result->num_rows > 0) {
        $num = $brandNumber % $result->num_rows;
@@ -217,7 +222,7 @@ function construct_marquee($return) {
     } 
     
 // Run through the components to create a marquee.
-    $sql = "SELECT * FROM `komponent`";
+    $sql = "SELECT * FROM `komponent` ORDER BY `Prettyprint` ASC";
     $result = $conn->query($sql);
     
     $dasString = "";
