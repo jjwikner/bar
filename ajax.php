@@ -47,7 +47,7 @@ function verkauf($brand, $return) {
    $jetztpreis = $row["Preis"];
    $neuPreis = $row["Preis"] * 1.03;
 
-   $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' , `Preis` = ' . $neuPreis . ' WHERE `Brand`="' . $brand . '"' ;
+   $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' , `Preis` = ' . $neuPreis . ' , `Verkauf` = `Verkauf` + 1 WHERE `Brand`="' . $brand . '"' ;
    $result = $conn->query($sql);
 
    // Store the  change in the log database
