@@ -11,3 +11,24 @@ button {
     text-transform: uppercase;
     color: black;
 }
+
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    -webkit-animation: marquee 30s linear infinite;
+    -moz-animation: marquee 30s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+    0%   { text-indent: 27.5em }
+    100% { text-indent: -105em }
+}
+
+@-moz-keyframes marquee {
+    0%   { text-indent: 27.5em }
+    100% { text-indent: -105em }
+}
+
