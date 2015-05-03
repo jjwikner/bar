@@ -24,11 +24,11 @@ button {
 
 @-webkit-keyframes marquee {
     0%   { text-indent: 27.5em }
-    100% { text-indent: -105em }
+    100% { text-indent: -170em }
 }
 
 @-moz-keyframes marquee {
     0%   { text-indent: 27.5em }
-    100% { text-indent: -105em }
+    100% { text-indent: -170em }
 }
 
