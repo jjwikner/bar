@@ -62,8 +62,6 @@ function neuKund() {
 </script>
 </head>
 <body bgcolor="black">
-    <center><IMG SRC = "pics/trial-error.gif" width=400px></center>
-    <br/>
     <div align="center">
     Das Summa: 
     <div id="summa">0</div>
@@ -100,7 +98,6 @@ $conn->close();
 
 ?>
 
-<br/>
 <table align="center">
 <tr>
 <td align="center">
