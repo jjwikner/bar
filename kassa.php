@@ -76,7 +76,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }     
 
-$sql = "SELECT * FROM `komponent` ORDER BY `Brand` ASC ";
+$sql = "SELECT * FROM `komponent` ORDER BY `Prettyprint` ASC ";
 $result = $conn->query($sql);
 
 $count = 0;
