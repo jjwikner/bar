@@ -6,9 +6,6 @@
 <script type="text/javascript" src="jquery-2.1.3.js"></script>
 <script type="text/javascript" src="chart.js"></script>
 <script type="text/javascript">
-    Chart.defaults.global.scaleBeginAtZero = true;
-</script>
-<script type="text/javascript">
 
 var bierchart;
 
@@ -70,10 +67,6 @@ function requestMarquee() {
   sendCmd({"cmd": "marquee"});
 }
 
-function updatePreis() {
-  sendCmd({"cmd": "preis"});
-}
-
 function requestChart() {
   sendCmd({"cmd": "chart", "brandNumber": brandNumber});
   brandNumber = brandNumber + 1;
@@ -85,7 +78,6 @@ function requestPreisliste() {
 
 $(function() {
   brandNumber = 0;
-  setInterval(updatePreis, 60000);
   setTimeout(requestMarquee, 6000);
   setTimeout(requestChart, 3000);
 });
