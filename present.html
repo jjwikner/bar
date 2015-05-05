@@ -18,13 +18,14 @@ function ajaxDone(data) {
       case "chart":
          $('#chart-title').html(data["brand"]);
          $('#chart-preis').html(data["preis"]);
-         var chartCanvas = $('#bier-chart').get(0).getContext("2d");           
-         chartCanvas.canvas.width = 700;
-         chartCanvas.canvas.height = 330;
 
          if (bierchart) {
             bierchart.destroy();
          }
+
+         var chartCanvas = $('#bier-chart').get(0).getContext("2d");           
+         chartCanvas.canvas.width = 700;
+         chartCanvas.canvas.height = 330;
 
         $('#preisliste').hide();
         $('#chart-title').show();
