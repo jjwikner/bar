@@ -5,6 +5,10 @@ body, td {
     color: yellow;
 }
 
+.profit {
+    font-size: 14;
+}
+
 button {
     font-family: "Courier";
     font-size: 30;

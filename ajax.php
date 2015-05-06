@@ -39,20 +39,62 @@ function verkauf($brand, $return) {
        die("Connection failed: " . $conn->connect_error);
    }     
 
+   $sql = "SELECT * FROM `profit`";
+   $result = $conn->query($sql);
+   $row = $result->fetch_assoc();
+   $profit = $row["Profit"];
+   $increase = $row["Increase"] == 1;
+
    $sql = 'SELECT * FROM  `komponent`  WHERE  `Brand` = "' . $brand . '"';
    $result = $conn->query($sql);
    $row = $result->fetch_assoc();
    $id = $row["ID"];
 
    $jetztpreis = $row["Preis"];
-   $neuPreis = $row["Preis"] * 1.03;
+   if ($increase) {
+       $neuPreis = $row["Preis"] * 1.03;
+   } else {
+       $neuPreis = $row["Preis"];       
+   }
+
+   $thisProfit = $jetztpreis - $row["Einkaufpreis"];
+   $return["profit"] = $profit + $thisProfit;
+
 
    $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' , `Preis` = ' . $neuPreis . ' , `Verkauf` = `Verkauf` + 1 WHERE `Brand`="' . $brand . '"' ;
-   $result = $conn->query($sql);
+   $conn->query($sql);
 
    // Store the  change in the log database
    $sql = 'INSERT INTO `dasBar`.`geschichte` (`Zeit`, `Preis`, `Brand`, `ID`) VALUES ( NOW(), "' . $neuPreis . '", "' . $brand . '" , "' . $id . '" );';
-   $result = $conn->query($sql);
+   $conn->query($sql);
+
+   $sql = 'UPDATE `profit` SET `Profit` = `Profit` + ' . $thisProfit;
+   $conn->query($sql);
+
+   if ($profit >= 100 && $increase) {
+       //Rea ut något! Krasch på börsen! Twitter!
+       $sql = 'SELECT * FROM `komponent` ORDER BY `Verkauf` ASC';
+       $result = $conn->query($sql);
+       
+       for ($i == 0; $i < 3; $i++) {
+           $row = $result->fetch_assoc();
+           $brand = $row["Brand"];
+           $reapris = rand(1, $row["Minimipreis"] * 0.75);
+           $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $row["Preis"] . ', Preis = ' . $reapris . ' WHERE `Brand`="' . $brand . '"';
+           $conn->query($sql);
+       }
+
+
+       $sql = 'UPDATE `profit` SET `Increase` = 0';
+       $result = $conn->query($sql);       
+   } else if ($profit <= 50 && !$increase) {
+       //Slut på rea
+       $sql = 'UPDATE `komponent` SET `Preis` = `Minimipreis` WHERE `Preis` < `Minimipreis`';
+       $conn->query($sql);       
+       
+       $sql = 'UPDATE `profit` SET `Increase` = 1';
+       $conn->query($sql);       
+   }
 
    echo json_encode($return);   
    $conn->close();

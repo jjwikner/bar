@@ -22,7 +22,7 @@ function ajaxDone(data) {
         }
         break;
     case "verkauf":
-        
+        $("#profit").html(data["profit"]);
         break;
     default:
         break;
@@ -94,6 +94,10 @@ $preislist .= "};</script>\n";
 
 echo $preislist;
 
+$sql = "SELECT `Profit` FROM `profit`";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+echo "<div class='profit'>Approx profit: <b id='profit'>"  . $row["Profit"] . '</b></div>';
 $conn->close();
 
 ?>

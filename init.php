@@ -3,7 +3,6 @@
 
 echo '<HTML><HEAD>';
 echo '<meta charset="utf-8" />';
-echo '<meta http-equiv="refresh" content="1; URL=connect.php">';
 echo '</HEAD>';
 echo '<BODY>';
 
@@ -11,7 +10,7 @@ include 'cred.php'; // include the login credentials for the database.
 
 // Create the databases
 $conn = mysqli_connect($servername, $username, $password);
-$sql = "CREATE DATABASE " . $dbname;
+$sql = "CREATE DATABASE IF NOT EXISTS " . $dbname;
 
 // Check connection
 if (!$conn) {
@@ -32,6 +31,24 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+
+$sql = "DROP TABLE IF EXISTS geschichte, komponent, messages, Preis, profit";
+if ($conn->query($sql) === TRUE) {
+    echo "Alle Tables in Database dropped, Jah!";
+} else {
+    echo "Error dropping tables: " . $conn->error;
+}
+
+
+$sql = "CREATE TABLE profit (Profit float, Increase int(1))";
+
+// sql to create table
+if ($conn->query($sql) === TRUE) {
+    echo "Table profit created successfully. Gewesen, Jah!";
+} else {
+    echo "Error creating table profit: " . $conn->error;
+}
+
 
 // sql to create table
 
@@ -60,7 +77,8 @@ Gut text,
 Minimipreis float,
 Altpreis float, 
 Originalpreis float,
-Prettyprint text
+Prettyprint text,
+Einkaufpreis float
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -101,7 +119,7 @@ $conn->close();
 
 
 //
-$mode = $_GET["mode"];
+//$mode = $_GET["mode"];
 
 
 // Create connection
@@ -128,41 +146,44 @@ $result = $conn->query($sql);
 
 
 // TT
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("TT", "Pripps", "200", "0", "20", "0", "Ja, sehr gut.", "10", "20", "20", "TT")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("TT", "Pripps", "200", "0", "20", "0", "Ja, sehr gut.", "10", "20", "20", "TT", "14.5")';
 $result = $conn->query($sql);
 
 // Staropramen
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("Staro", "Pripps", "200", "0", "20", "1", "Ja, sehr gut.", "10", "20", "20", "Staropramen")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Staro", "Pripps", "200", "0", "20", "1", "Ja, sehr gut.", "10", "20", "20", "Staropramen", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("Lattol", "Pripps", "200", "0", "20", "2", "Ja, sehr gut.", "10", "20", "20", "Das Leichtbier")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Lattol", "Pripps", "200", "0", "20", "2", "Ja, sehr gut.", "10", "20", "20", "Das Leichtbier", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("Hof", "Pripps", "200", "0", "20", "3", "Ja, sehr gut.", "10", "20", "20", "Hof")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Hof", "Pripps", "200", "0", "20", "3", "Ja, sehr gut.", "10", "20", "20", "Hof", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("Punsch", "Pripps", "200", "0", "20", "4", "Ja, sehr gut.", "10", "20", "20", "Punsch")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Punsch", "Pripps", "200", "0", "20", "4", "Ja, sehr gut.", "10", "20", "20", "Punsch", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("Lask", "Pripps", "200", "0", "20", "5", "Ja, sehr gut.", "10", "20", "20", "Lemonade")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Lask", "Pripps", "200", "0", "20", "5", "Ja, sehr gut.", "10", "20", "20", "Lemonade", "10")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("Mariestad", "Pripps", "200", "0", "20", "6", "Ja, sehr gut.", "10", "20", "20", "Mariestad")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Mariestad", "Pripps", "200", "0", "20", "6", "Ja, sehr gut.", "10", "20", "20", "Mariestad", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("Sprit", "Pripps", "200", "0", "20", "7", "Ja, sehr gut.", "10", "20", "20", "Sprit")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Sprit", "Pripps", "200", "0", "20", "7", "Ja, sehr gut.", "10", "20", "20", "Sprit", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("Stella", "Pripps", "200", "0", "20", "8", "Ja, sehr gut.", "10", "20", "20", "Stella Artois")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Stella", "Pripps", "200", "0", "20", "8", "Ja, sehr gut.", "10", "20", "20", "Stella Artois", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`) VALUES ("Heineken", "Pripps", "200", "0", "20", "9", "Ja, sehr gut.", "10", "20", "20", "Heineken")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Heineken", "Pripps", "200", "0", "20", "9", "Ja, sehr gut.", "10", "20", "20", "Heineken", "14.5")';
 $result = $conn->query($sql);
 
 $sql = 'INSERT INTO `dasBar`.`messages` (`id`, `Message` ) VALUES ("Ticker", "Soon to be Preises")';
 $result = $conn->query($sql);
 
 $sql = 'INSERT INTO `dasBar`.`Preis` (`Preis` ) VALUES ("0")';
+$result = $conn->query($sql);
+
+$sql = 'INSERT INTO `dasBar`.`profit` (`Profit`, `Increase`) VALUES ("0", "1")';
 $result = $conn->query($sql);
 
 

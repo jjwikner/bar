@@ -39,22 +39,30 @@ if ($conn->connect_error) {
 }     
 
 while (true) {
+    $sql = "SELECT `Increase` FROM `profit`";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $increase = $row["Increase"] == 1;
+
     $sql = "SELECT * FROM `komponent`";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             $preis = $row["Preis"];
-            $orig  = $row["Originalpreis"];
             $mini  = $row["Minimipreis"];
             $altpreis = $preis;
             
             // Algorithm to set the Preis - be creative...
-            $preis = $preis - ($preis-$mini)*0.05 + 0.2*rand(0, 2); 
+            if ($preis >= $mini) {
+                $preis = $preis - ($preis-$mini)*0.05 + 0.2*rand(0, 2); 
+            }
             
-            // We shouldn't loose money
-            if ($preis < $mini) {
-                $preis = $mini;
-            }	  
+            if ($increase) {
+                // We shouldn't loose money unless we want to
+                if ($preis < $mini) {
+                    $preis = $mini;
+                }	  
+            }
             
             echo "Changing price of " . $row["Prettyprint"] . " from " . $altpreis . " to " . $preis . "\n";
             
