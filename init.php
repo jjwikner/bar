@@ -68,12 +68,10 @@ if ($conn->query($sql) === TRUE) {
 
 $sql = "CREATE TABLE komponent (
 Brand text, 
-Hersteller text, 
-Total int(11),
+Popularity int(11),
 Verkauf int(11),
 Preis float,
 ID int(11),
-Gut text,
 Minimipreis float,
 Altpreis float, 
 Originalpreis float,
@@ -146,35 +144,35 @@ $result = $conn->query($sql);
 
 
 // TT
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("TT", "Pripps", "200", "0", "20", "0", "Ja, sehr gut.", "10", "20", "20", "TT", "14.5")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("TT",  "0", "0", "20", "0",  "15", "20", "20", "TT", "14.5")';
 $result = $conn->query($sql);
 
 // Staropramen
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Staro", "Pripps", "200", "0", "20", "1", "Ja, sehr gut.", "10", "20", "20", "Staropramen", "14.5")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Staro",  "0", "0", "20", "1",  "15", "20", "20", "Staropramen", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Lattol", "Pripps", "200", "0", "20", "2", "Ja, sehr gut.", "10", "20", "20", "Das Leichtbier", "14.5")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Lattol",  "0", "0", "20", "2",  "15", "20", "20", "Das Leichtbier", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Hof", "Pripps", "200", "0", "20", "3", "Ja, sehr gut.", "10", "20", "20", "Hof", "14.5")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Hof",  "0", "0", "20", "3",  "15", "20", "20", "Hof", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Punsch", "Pripps", "200", "0", "20", "4", "Ja, sehr gut.", "10", "20", "20", "Punsch", "14.5")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Punsch",  "0", "0", "20", "4",  "15", "20", "20", "Punsch", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Lask", "Pripps", "200", "0", "20", "5", "Ja, sehr gut.", "10", "20", "20", "Lemonade", "10")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Lask",  "0", "0", "20", "5",  "15", "20", "20", "Lemonade", "10")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Mariestad", "Pripps", "200", "0", "20", "6", "Ja, sehr gut.", "10", "20", "20", "Mariestad", "14.5")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Mariestad",  "0", "0", "20", "6",  "15", "20", "20", "Mariestad", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Sprit", "Pripps", "200", "0", "20", "7", "Ja, sehr gut.", "10", "20", "20", "Sprit", "14.5")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Sprit",  "0", "0", "20", "7",  "15", "20", "20", "Sprit", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Stella", "Pripps", "200", "0", "20", "8", "Ja, sehr gut.", "10", "20", "20", "Stella Artois", "14.5")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Stella",  "0", "0", "20", "8",  "15", "20", "20", "Stella Artois", "14.5")';
 $result = $conn->query($sql);
 
-$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`, `Hersteller`, `Total`, `Verkauf`, `Preis`, `ID`, `Gut`, `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Heineken", "Pripps", "200", "0", "20", "9", "Ja, sehr gut.", "10", "20", "20", "Heineken", "14.5")';
+$sql = 'INSERT INTO `dasBar`.`komponent` (`Brand`,  `Popularity`, `Verkauf`, `Preis`, `ID`,  `Minimipreis`, `Altpreis`, `Originalpreis`, `Prettyprint`, `Einkaufpreis`) VALUES ("Heineken",  "0", "0", "20", "9",  "15", "20", "20", "Heineken", "14.5")';
 $result = $conn->query($sql);
 
 $sql = 'INSERT INTO `dasBar`.`messages` (`id`, `Message` ) VALUES ("Ticker", "Soon to be Preises")';
