@@ -51,10 +51,16 @@ while (true) {
             $preis = $row["Preis"];
             $mini  = $row["Minimipreis"];
             $altpreis = $preis;
+            $popularity = max($row["Popularity"] - 1, 0);
             
             // Algorithm to set the Preis - be creative...
             if ($preis >= $mini) {
-                $preis = $preis - ($preis-$mini)*0.05 + 0.2*rand(0, 2); 
+                if ($popularity == 0) {
+                    $preis = $row["Einkaufpreis"];
+                } else {
+                    $preis = $row["Einkaufpreis"] * (0.25 * log($popularity) + 1.154) + 0.3*rand(0, 2);
+//                $preis = $preis - ($preis-$mini)*0.05 + 0.2*rand(0, 2); 
+                }
             }
             
             if ($increase) {
@@ -67,9 +73,7 @@ while (true) {
             echo "Changing price of " . $row["Prettyprint"] . " from " . $altpreis . " to " . $preis . "\n";
             
             // Set the new Preis and update the old Preis.
-            $sql = 'UPDATE `komponent` SET `Preis` = ' . $preis . ' WHERE `Brand`="' . $row["Brand"] . '"' ;
-            $conn->query($sql);
-            $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $altpreis . ' WHERE `Brand`="' . $row["Brand"] . '"' ;
+            $sql = 'UPDATE `komponent` SET `Preis` = ' . $preis . ' , `Altpreis` = ' . $altpreis . ' , `Popularity` = ' . $popularity . ' WHERE `Brand`="' . $row["Brand"] . '"' ;
             $conn->query($sql);
             
             // Store the  change in the log database

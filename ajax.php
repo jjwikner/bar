@@ -49,19 +49,21 @@ function verkauf($brand, $return) {
    $result = $conn->query($sql);
    $row = $result->fetch_assoc();
    $id = $row["ID"];
+   $popularity = $row["Popularity"] + 1;
 
    $jetztpreis = $row["Preis"];
    if ($increase) {
-       $neuPreis = $row["Preis"] * 1.03;
+       $neuPreis = $row["Einkaufpreis"] * (0.25 * log($popularity) + 1.154) + 0.3*rand(0, 2);
+//       $neuPreis = $row["Preis"] * 1.03;
    } else {
-       $neuPreis = $row["Preis"];       
+       $neuPreis = $jetztpreis;       
    }
 
    $thisProfit = $jetztpreis - $row["Einkaufpreis"];
    $return["profit"] = $profit + $thisProfit;
 
 
-   $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' , `Preis` = ' . $neuPreis . ' , `Verkauf` = `Verkauf` + 1 WHERE `Brand`="' . $brand . '"' ;
+   $sql = 'UPDATE `komponent` SET `Altpreis` = ' . $jetztpreis . ' , `Preis` = ' . $neuPreis . ' , `Verkauf` = `Verkauf` + 1 , `Popularity` = ' . $popularity . '  WHERE `Brand`="' . $brand . '"' ;
    $conn->query($sql);
 
    // Store the  change in the log database
